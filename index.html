@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estofado Limpo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Syne:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1 id="titulo">Estofado Limpo</h1>
+
+  <div class="step-indicators">
+    <div class="step-indicator active">
+      <div class="step-indicator-circle"><span>1</span></div>
+      <div class="step-indicator-label">Cliente</div>
+    </div>
+    <div class="step-indicator">
+      <div class="step-indicator-circle"><span>2</span></div>
+      <div class="step-indicator-label">Serviço</div>
+    </div>
+    <div class="step-indicator">
+      <div class="step-indicator-circle"><span>3</span></div>
+      <div class="step-indicator-label">Endereço</div>
+    </div>
+    <div class="step-indicator">
+      <div class="step-indicator-circle"><span>4</span></div>
+      <div class="step-indicator-label">Agenda</div>
+    </div>
+    <div class="step-indicator">
+      <div class="step-indicator-circle"><span>5</span></div>
+      <div class="step-indicator-label">Contato</div>
+    </div>
+    <div class="step-indicator">
+      <div class="step-indicator-circle"><span>6</span></div>
+      <div class="step-indicator-label">Valor</div>
+    </div>
+  </div>
+
+  <form id="form">
+
+    <!-- Etapa 1: Nome -->
+    <div class="step active">
+      <span class="step-label">Etapa 1 de 6</span>
+      <h2>Qual é o nome do cliente?</h2>
+      <input type="text" id="nome" placeholder="Nome completo">
+      <small class="error-msg" id="nomeErro"></small>
+      <div class="btn-row">
+        <button type="button" class="next" style="width:100%">Continuar</button>
+      </div>
+    </div>
+
+    <!-- Etapa 2: Serviços -->
+    <div class="step">
+      <span class="step-label">Etapa 2 de 6</span>
+      <h2>Qual serviço será realizado?</h2>
+      <div class="options" id="servicosOptions">
+        <label><input type="checkbox" value="Limpeza de sofá"> Limpeza de sofá</label>
+        <label><input type="checkbox" value="Limpeza de colchão"> Limpeza de colchão</label>
+        <label><input type="checkbox" value="Limpeza de cadeira"> Limpeza de cadeira</label>
+        <label><input type="checkbox" value="Limpeza de banco automotivo"> Limpeza de banco automotivo</label>
+        <label><input type="checkbox" value="Limpeza de tapete"> Limpeza de tapete</label>
+        <label><input type="checkbox" value="Higienização completa"> Higienização completa</label>
+        <label><input type="checkbox" value="Outro serviço"> Outro serviço</label>
+      </div>
+      <small class="error-msg" id="servicoErro"></small>
+      <div class="btn-row">
+        <button type="button" class="prev">Voltar</button>
+        <button type="button" class="next">Continuar</button>
+      </div>
+    </div>
+
+    <!-- Etapa 3: Endereço -->
+    <div class="step">
+      <span class="step-label">Etapa 3 de 6</span>
+      <h2>Endereço do cliente</h2>
+      <div class="input-group">
+        <label class="field-label">Rua / Avenida</label>
+        <input type="text" id="rua" placeholder="Ex: Rua das Flores, 123">
+      </div>
+      <div class="input-row">
+        <div class="input-group">
+          <label class="field-label">Bairro</label>
+          <input type="text" id="bairro" placeholder="Bairro">
+        </div>
+        <div class="input-group">
+          <label class="field-label">Cidade</label>
+          <input type="text" id="cidade" placeholder="Cidade">
+        </div>
+      </div>
+      <small class="error-msg" id="enderecoErro"></small>
+      <div class="btn-row">
+        <button type="button" class="prev">Voltar</button>
+        <button type="button" class="next">Continuar</button>
+      </div>
+    </div>
+
+    <!-- Etapa 4: Data e Hora -->
+    <div class="step">
+      <span class="step-label">Etapa 4 de 6</span>
+      <h2>Data e hora do serviço</h2>
+      <div class="input-row">
+        <div class="input-group">
+          <label class="field-label">Data</label>
+          <input type="date" id="data">
+        </div>
+        <div class="input-group">
+          <label class="field-label">Horário</label>
+          <input type="time" id="hora">
+        </div>
+      </div>
+      <small class="error-msg" id="agendaErro"></small>
+      <div class="btn-row">
+        <button type="button" class="prev">Voltar</button>
+        <button type="button" class="next">Continuar</button>
+      </div>
+    </div>
+
+    <!-- Etapa 5: Contato -->
+    <div class="step">
+      <span class="step-label">Etapa 5 de 6</span>
+      <h2>Contato do cliente</h2>
+      <input type="tel" id="telefone" placeholder="(00) 90000-0000">
+      <small class="error-msg" id="telefoneErro"></small>
+      <div class="btn-row">
+        <button type="button" class="prev">Voltar</button>
+        <button type="button" class="next">Continuar</button>
+      </div>
+    </div>
+
+    <!-- Etapa 6: Valor + Observações -->
+    <div class="step">
+      <span class="step-label">Etapa 6 de 6</span>
+      <h2>Valor e observações</h2>
+      <div class="input-group">
+        <label class="field-label">Valor do serviço (R$)</label>
+        <input type="text" id="valor" placeholder="Ex: 150,00">
+      </div>
+      <div class="input-group">
+        <label class="field-label">Observações (opcional)</label>
+        <textarea id="obs" placeholder="Alguma informação adicional..."></textarea>
+      </div>
+      <small class="error-msg" id="valorErro"></small>
+      <div class="btn-row">
+        <button type="button" class="prev">Voltar</button>
+        <button type="button" id="enviarBtn">Enviar via WhatsApp</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <div class="checkmark">
+      <div class="circle"></div>
+      <div class="check"></div>
+    </div>
+    <h2>Pedido registrado!</h2>
+    <p>O WhatsApp foi aberto com as informações do serviço. Verifique e envie a mensagem.</p>
+    <button id="closeModal">Fechar</button>
+  </div>
+</div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
