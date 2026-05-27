@@ -156,7 +156,7 @@
     msg += `🛠️ *Serviço(s):*\n`;
     checks.forEach(s => { msg += `   • ${s}\n`; });
     msg += `\n📍 *Endereço:* ${enderecoCompleto}\n\n`;
-    msg += `🗒 *Data:* ${formatDate(data)}\n`;
+    msg += `📒 *Data:* ${formatDate(data)}\n`;
     msg += `⏰ *Horário:* ${hora}h\n\n`;
     msg += `💰 *Valor:* R$ ${valor}\n`;
     if(obs){
